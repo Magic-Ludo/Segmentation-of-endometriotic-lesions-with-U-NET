@@ -33,3 +33,24 @@ def verifTaille(liste):
     else:
         print("Tous les éléments de la liste n'ont pas la meme dimension")
     
+def tailleImage(chemin):
+    liste_bonnes_images = []
+    src = Path(chemin)
+    listFiles = [f.resolve() for f in src.glob("*.jpg")]
+
+    for i in range(len(listFiles)):
+        image = Image.open( listFiles[i] )
+        image_array = np.array( image )
+        if i == 0:
+            liste_bonnes_images.append(image_array)
+            print("la taille des images doivent etre de: ",image_array.shape)
+            
+        elif  image_array.shape == liste_bonnes_images[0].shape:
+            liste_bonnes_images.append(image_array)
+
+        elif image_array.shape != liste_bonnes_images[0].shape:
+            redimension(image_array, liste_bonnes_images)
+
+
+    verifTaille(liste_bonnes_images)
+        
