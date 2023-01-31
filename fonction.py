@@ -5,15 +5,15 @@ from pathlib import Path
 
 
 def redimension(image, liste):
-    if len(image[:,0,0]) < 360:
-        rajout_lignes = np.zeros( (360 - len(image[:,0,0]), len(image[0,:,0]),3) )
+    if image.shape[0] < 360:
+        rajout_lignes = np.zeros( (360 - image.shape[0], image.shape[1],3),dtype=np.uint8 )
         image = np.concatenate( (image, rajout_lignes), axis=0)
            
     else:
         image = image[:360,:,:]
         
-    if len(image[0,:,0]) < 640:
-        rajout_colonne = np.zeros( (len(image[:,0,0]), 640-len(image[0,:,0]),3) )
+    if image.shape[1] < 640:
+        rajout_colonne = np.zeros( (image.shape[0], 640-image.shape[1],3), dtype=np.uint8 )
         image = np.concatenate( (image, rajout_colonne), axis=1)
         
     else:
