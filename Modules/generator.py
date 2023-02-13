@@ -6,7 +6,7 @@ def preprocess_data(img):
       
     return img
 
-def trainGenerator(train_img_path, train_mask_path, batch_size, seed):
+def Generator(train_img_path, train_mask_path, batch_size, seed):
     
     img_data_gen_args = dict(horizontal_flip=True,
                       vertical_flip=True,
