@@ -4,7 +4,7 @@ import tensorflow as tf
 import datetime
 from keras import callbacks
 tf.debugging.set_log_device_placement(False)
-tf.get_logger().setLevel('WARNING')
+tf.get_logger().setLevel('ERROR')
 tf.autograph.set_verbosity(1)
 
 sys.path.append('..')
@@ -22,7 +22,7 @@ mode = 1
 datasets_dir = "/media/ludovic/Cache/ENID"
 
 seed = 24
-batch_size = 20
+batch_size = 10
 
 train_img_path = os.path.join(datasets_dir, 'DATASET', 'Train', 'Images')
 train_mask_path = os.path.join(datasets_dir, 'DATASET', 'Train', 'Masks')
