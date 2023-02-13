@@ -9,7 +9,7 @@
 #   Quelques infos générales sur le projet
 #
 
-DATA_PATH = 'C:/Users/Marc/Desktop/DATASET'
+DATA_PATH = '/media/ludovic/Cache/ENID'
 DEFAULT_NAME = "NC"
 
 VERSION = 2
