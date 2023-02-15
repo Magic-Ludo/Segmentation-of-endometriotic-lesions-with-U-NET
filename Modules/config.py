@@ -9,8 +9,8 @@
 #   Quelques infos générales sur le projet
 #
 
-# DATA_PATH = "C:/Users/Marc/Desktop/DATASET2"
-DATA_PATH = "/media/ludovic/Cache/ENID"
+DATA_PATH = "C:/Users/Marc/Desktop/"
+#DATA_PATH = "/media/ludovic/Cache/ENID"
 
 DEFAULT_NAME = "NC"
 
