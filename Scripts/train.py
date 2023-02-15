@@ -19,7 +19,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 mode = 1
 
-datasets_dir = "/media/ludovic/Cache/ENID"
+datasets_dir = "C:/Users/Marc/Desktop"
 
 seed = 24
 batch_size = 10
