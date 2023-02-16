@@ -37,6 +37,22 @@ def plot3(image_array, mask_array):
     ax3.axis('off')
     ax3.set_title("Superposition des deux")
 
+def plot_pred(image_array, mask_array, pred_mask_array):
+    plt.figure(figsize=(20, 15))
+    plt.subplot(231)
+    plt.title('Image de test')
+    plt.imshow(image_array)
+    plt.axis('off')
+    plt.subplot(232)
+    plt.title('Masque originel')
+    plt.imshow(mask_array, cmap='cool')
+    plt.axis('off')
+    plt.subplot(233)
+    plt.title('Masque prédit')
+    plt.imshow(pred_mask_array, cmap='cool')
+    plt.axis('off')
+    plt.show()
+
 def plot_img_and_hist(image, axes, bins=256):
     
     image = img_as_float(image)
