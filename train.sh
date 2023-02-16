@@ -12,7 +12,7 @@ while true; do
     read -p "Voulezvous télécharger le Dataset orignel ? [Y/N]" yn
     case $yn in
         [Yy]* ) echo "cool"; break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Merci de répondre par Y ou N.";;
     esac
 done
@@ -29,6 +29,6 @@ rm DATASET.zip
 
 echo "$(tput bold)Créaton d'un environement Python...$(tput sgr0)"
 echo
-conda env create --file UNET-Endometriosis.yml --python=3.9.0
+conda env create --file UNET-Endometriosis.yml
 
 
