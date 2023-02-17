@@ -4,7 +4,7 @@ Ensemble de Notebook Jupyter présentant les diverses étapes nécessaires pour 
 
 ## Variable globale
 
-Pour faire fonctionner le projet correctement, vous devez modifier la variable suivante situé dans le fichier `Modules/config.py` :
+Pour faire fonctionner le projet correctement, vous devez modifier la variable suivante située dans le fichier `Modules/config.py` :
 
 `DATA_PATH = Chemin/vers/le/dossier/contenant/les/datasets`
 
