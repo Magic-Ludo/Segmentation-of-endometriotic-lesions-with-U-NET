@@ -13,7 +13,7 @@ Pour faire fonctionner le projet correctement, vous devez modifier la variable s
 Il est nécéssaire de télécharger les datasets suivants :
 
 - **ENID_v1.0_tracked.zip** : dataset ENID d'origine corespondant aux données mises à disposition par l'ITEC
-- **DATASET.zip** : notre propre dataset où on été appliqué les étapes de pré-processing avec la répartition en trois groupes
+- **DATASET.zip** : notre propre dataset où ont été appliqué les étapes de pré-processing avec la répartition en trois groupes
 
 Vous pouvez lancer le téléchargement des données et la création de l'environnement python avec la commande suivante :
 
