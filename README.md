@@ -1,8 +1,8 @@
 # Segmentation automatiques de lésions endométriotiques via U-NET
 
-Ensemble de Notebook Jupyter préseant les diverses étapes nécessaires pour réaliser un apprentissage et analyser les résultats en utilisant l'architecture U-NET.
+Ensemble de Notebook Jupyter présentant les diverses étapes nécessaires pour réaliser un apprentissage et analyser les résultats en utilisant l'architecture U-NET.
 
-## Variable globales
+## Variable globale
 
 Pour faire fonctionner le projet correctement, vous devez modifier la variable suivante situé dans le fichier `Modules/config.py` :
 
@@ -13,14 +13,14 @@ Pour faire fonctionner le projet correctement, vous devez modifier la variable s
 Il est nécéssaire de télécharger les datasets suivants :
 
 - **ENID_v1.0_tracked.zip** : dataset ENID d'origine corespondant aux données mises à disposition par l'ITEC
-- **DATASET.zip** : notre propre dataset où on été appliqué les étapes de pré-processing avec la répartition en trois groupe
+- **DATASET.zip** : notre propre dataset où on été appliqué les étapes de pré-processing avec la répartition en trois groupes
 
-Vous pouvez lancer le téléchargement des doonées et la création de l'environnement python avec la commande suivante :
+Vous pouvez lancer le téléchargement des données et la création de l'environnement python avec la commande suivante :
 
 ```bash
-chmod +x train.sh
+chmod +x build.sh
 
-./train.sh
+./build.sh
 ```
 
 ## Tests
@@ -40,6 +40,13 @@ Une fois que votre environnement est bien configuré, vous pouvez ouvrir et exé
 Les modèles U-NET entrainés sont disponibles `Notebooks/` :
 
 ```python
-ENDOMETRIOSIS_UNET_SEG_BC_FINAL.hdf5 # Fonction de perte : Entropie coirée binaire
+ENDOMETRIOSIS_UNET_SEG_BC_FINAL.hdf5 # Fonction de perte : Entropie coisée binaire
 ENDOMETRIOSIS_UNET_SEG_JAC_FINAL.hdf5 # Fonction de perte : Score de Jaccard
+```
+
+Si vous souhaitez lancer vous-même l'apprentissage vous pouvez éxécuter la commande suivante :
+
+```python
+conda activate UNET-Endometriosis
+python Scripts/train.py
 ```
